@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+const yargs = require('yargs')
+  .usage(`Generates madlibs
+
+Usage: $0 [template] [options]
+
+[template] must be a valid Handlebars template.`)
+
+const madlibCore = require('../src/core')
+
+async function cli(opts) {
+  if (opts.help) {
+    yargs.showHelp()
+    return
+  }
+
+  const string = opts._.join(' ')
+  try {
+    const madlib = await madlibCore(string)
+    process.stdout.write(madlib + '\n')
+  } catch (e) {
+    process.stderr.write('Invalid template -- must be a valid Handlebars template.\n')
+    process.exit(1)
+    return
+  }
+
+  process.exit(0)
+}
+
+cli(yargs.argv)
