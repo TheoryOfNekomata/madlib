@@ -14,5 +14,7 @@
     "en-inflectors": "^1.0.12",
     "handlebars": "^4.1.0",
     "yargs": "^13.2.1"
-  }
+  },
+  "repository": "https://github.com/Temoto-kun/madlib.git",
+  "author": "TheoryOfNekomata <allan.crisostomo@outlook.com>"
 }
