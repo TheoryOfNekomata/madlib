@@ -10,9 +10,9 @@ Get the database and unpack on the root directory.
 
 Supply a valid Handlebars to `madlib`.
 
-Use tags for words with specific parts of speech. If you want a noun followed by a verb, use:
+Use tags for words with specific parts of speech. If you want an adverb followed by an adjective and a noun, use:
 
-    {{noun.[0]}} {{verb.[0]}}
+    {{adv.[0]}} {{adj.[0]}} {{noun.[0]}}
 
 If you want two different nouns side by side:
 
@@ -26,13 +26,13 @@ Here are the available Handlebars helpers for constructing your madlib:
 
 |Name|Used for|
 |----|--------|
-|`plural`|noun|
-|`ing`/`gerund`|verb|
-|`past`|verb
-|`pastParticiple`|verb|
-|`present`|verb|
-|`comparative`|adjective/adverb|
-|`superlative`|adjective/adverb|
+|`plural`|`noun`|
+|`ing`/`gerund`|`verb`|
+|`past`|`verb`|
+|`pastParticiple`|`verb`|
+|`present`|`verb`|
+|`comparative`|`adj`/`adv`|
+|`superlative`|`adj`/`adv`|
 
 ## License
 
